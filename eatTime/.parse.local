@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "eatTime"
+    },
+    "eatTime": {
+      "applicationId": "VdhTx388yAGg6OrGCxp6mMzVYRpGRiLZL6QFdDgJ"
+    }
+  }
+}
