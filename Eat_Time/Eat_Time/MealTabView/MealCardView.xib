@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MealCardView" customModule="Eat_Time" customModuleProvider="target">
+            <connections>
+                <outlet property="profileImageView" destination="jR3-sQ-bdK" id="1GR-Xe-E2c"/>
+                <outlet property="view" destination="iN0-l3-epB" id="zmz-N1-tgI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="MealCardView" id="iN0-l3-epB" customClass="MealCardView" customModule="Eat_Time">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYj-gB-3yV" userLabel="backgroundView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user" translatesAutoresizingMaskIntoConstraints="NO" id="jR3-sQ-bdK">
+                    <rect key="frame" x="200" y="200" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="jR3-sQ-bdK" secondAttribute="height" id="Fgh-jg-Mte"/>
+                        <constraint firstAttribute="width" constant="200" id="QbR-c7-6NH"/>
+                    </constraints>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="103" y="77" width="194" height="182"/>
+                    </variation>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="jR3-sQ-bdK" secondAttribute="centerX" id="4wt-AA-xaJ"/>
+                <constraint firstItem="zYj-gB-3yV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="J23-R2-Gwq"/>
+                <constraint firstAttribute="centerX" secondItem="jR3-sQ-bdK" secondAttribute="centerX" id="LDH-Y3-axX"/>
+                <constraint firstAttribute="trailing" secondItem="zYj-gB-3yV" secondAttribute="trailing" id="MDm-Mp-QZl"/>
+                <constraint firstItem="zYj-gB-3yV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="W49-s9-gJj"/>
+                <constraint firstAttribute="bottom" secondItem="zYj-gB-3yV" secondAttribute="bottom" id="WXJ-Mt-YEe"/>
+                <constraint firstItem="jR3-sQ-bdK" firstAttribute="width" secondItem="zYj-gB-3yV" secondAttribute="width" multiplier="1:3" id="YOc-8R-39b"/>
+                <constraint firstAttribute="centerY" secondItem="jR3-sQ-bdK" secondAttribute="centerY" id="dld-2x-vyw"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="YOc-8R-39b"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="profileImageView" destination="jR3-sQ-bdK" id="8aq-TI-93s"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="default_user" width="221" height="221"/>
+    </resources>
+</document>

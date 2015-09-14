@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A42587EA1B9FF19400D10AA7 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42587E91B9FF19400D10AA7 /* AppConstants.swift */; };
+		A42587EF1B9FF3C600D10AA7 /* MealNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42587EE1B9FF3C600D10AA7 /* MealNavigationController.swift */; };
+		A42587F11B9FF5CB00D10AA7 /* NotificationNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42587F01B9FF5CB00D10AA7 /* NotificationNavigationController.swift */; };
+		A42587F51BA0059700D10AA7 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42587F41BA0059700D10AA7 /* Utils.swift */; };
+		A42587F71BA009E700D10AA7 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42587F61BA009E700D10AA7 /* AppExtensions.swift */; };
+		A42587F91BA148A500D10AA7 /* MealCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A42587F81BA148A500D10AA7 /* MealCardView.xib */; };
 		A43989A81B9FC31000D84E79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989A71B9FC31000D84E79 /* AppDelegate.swift */; };
-		A43989AA1B9FC31000D84E79 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989A91B9FC31000D84E79 /* FirstViewController.swift */; };
-		A43989AC1B9FC31000D84E79 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989AB1B9FC31000D84E79 /* SecondViewController.swift */; };
 		A43989AF1B9FC31000D84E79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43989AD1B9FC31000D84E79 /* Main.storyboard */; };
 		A43989B11B9FC31000D84E79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A43989B01B9FC31000D84E79 /* Images.xcassets */; };
 		A43989B41B9FC31000D84E79 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43989B21B9FC31000D84E79 /* LaunchScreen.xib */; };
 		A43989C01B9FC31000D84E79 /* Eat_TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989BF1B9FC31000D84E79 /* Eat_TimeTests.swift */; };
+		A43989CE1B9FE88B00D84E79 /* MealTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989CD1B9FE88B00D84E79 /* MealTabViewController.swift */; };
+		A43989D01B9FE89500D84E79 /* NotificationTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989CF1B9FE89500D84E79 /* NotificationTabViewController.swift */; };
+		A43989D41B9FE8E900D84E79 /* MealCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989D31B9FE8E900D84E79 /* MealCardView.swift */; };
+		A43989D71B9FE98500D84E79 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989D51B9FE98500D84E79 /* NotificationTableViewCell.swift */; };
+		A43989D81B9FE98500D84E79 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43989D61B9FE98500D84E79 /* NotificationTableViewCell.xib */; };
+		A43989DA1B9FEA5E00D84E79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989D91B9FEA5E00D84E79 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +37,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A42587E91B9FF19400D10AA7 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		A42587EE1B9FF3C600D10AA7 /* MealNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealNavigationController.swift; path = MealTabView/MealNavigationController.swift; sourceTree = "<group>"; };
+		A42587F01B9FF5CB00D10AA7 /* NotificationNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationNavigationController.swift; path = NotificationTabView/NotificationNavigationController.swift; sourceTree = "<group>"; };
+		A42587F41BA0059700D10AA7 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = util/Utils.swift; sourceTree = "<group>"; };
+		A42587F61BA009E700D10AA7 /* AppExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppExtensions.swift; path = util/AppExtensions.swift; sourceTree = "<group>"; };
+		A42587F81BA148A500D10AA7 /* MealCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MealCardView.xib; path = MealTabView/MealCardView.xib; sourceTree = "<group>"; };
 		A43989A21B9FC31000D84E79 /* Eat_Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eat_Time.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43989A61B9FC31000D84E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A43989A71B9FC31000D84E79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A43989A91B9FC31000D84E79 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		A43989AB1B9FC31000D84E79 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		A43989AE1B9FC31000D84E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A43989B01B9FC31000D84E79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A43989B31B9FC31000D84E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A43989B91B9FC31000D84E79 /* Eat_TimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Eat_TimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43989BE1B9FC31000D84E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A43989BF1B9FC31000D84E79 /* Eat_TimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eat_TimeTests.swift; sourceTree = "<group>"; };
+		A43989CD1B9FE88B00D84E79 /* MealTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealTabViewController.swift; path = MealTabView/MealTabViewController.swift; sourceTree = "<group>"; };
+		A43989CF1B9FE89500D84E79 /* NotificationTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationTabViewController.swift; path = NotificationTabView/NotificationTabViewController.swift; sourceTree = "<group>"; };
+		A43989D31B9FE8E900D84E79 /* MealCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealCardView.swift; path = MealTabView/MealCardView.swift; sourceTree = "<group>"; };
+		A43989D51B9FE98500D84E79 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationTableViewCell.swift; path = NotificationTabView/NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		A43989D61B9FE98500D84E79 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NotificationTableViewCell.xib; path = NotificationTabView/NotificationTableViewCell.xib; sourceTree = "<group>"; };
+		A43989D91B9FEA5E00D84E79 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Authentication/LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A42587EB1B9FF19800D10AA7 /* AppCommon */ = {
+			isa = PBXGroup;
+			children = (
+				A42587E91B9FF19400D10AA7 /* AppConstants.swift */,
+				A42587F41BA0059700D10AA7 /* Utils.swift */,
+				A42587F61BA009E700D10AA7 /* AppExtensions.swift */,
+			);
+			name = AppCommon;
+			sourceTree = "<group>";
+		};
 		A43989991B9FC31000D84E79 = {
 			isa = PBXGroup;
 			children = (
@@ -80,8 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				A43989A71B9FC31000D84E79 /* AppDelegate.swift */,
-				A43989A91B9FC31000D84E79 /* FirstViewController.swift */,
-				A43989AB1B9FC31000D84E79 /* SecondViewController.swift */,
+				A42587EB1B9FF19800D10AA7 /* AppCommon */,
+				A43989DB1B9FEA7400D84E79 /* Authentication */,
+				A43989CB1B9FE76A00D84E79 /* MealTab */,
+				A43989CC1B9FE79800D84E79 /* NotificationTab */,
 				A43989AD1B9FC31000D84E79 /* Main.storyboard */,
 				A43989B01B9FC31000D84E79 /* Images.xcassets */,
 				A43989B21B9FC31000D84E79 /* LaunchScreen.xib */,
@@ -113,6 +145,36 @@
 				A43989BE1B9FC31000D84E79 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A43989CB1B9FE76A00D84E79 /* MealTab */ = {
+			isa = PBXGroup;
+			children = (
+				A42587EE1B9FF3C600D10AA7 /* MealNavigationController.swift */,
+				A43989CD1B9FE88B00D84E79 /* MealTabViewController.swift */,
+				A42587F81BA148A500D10AA7 /* MealCardView.xib */,
+				A43989D31B9FE8E900D84E79 /* MealCardView.swift */,
+			);
+			name = MealTab;
+			sourceTree = "<group>";
+		};
+		A43989CC1B9FE79800D84E79 /* NotificationTab */ = {
+			isa = PBXGroup;
+			children = (
+				A42587F01B9FF5CB00D10AA7 /* NotificationNavigationController.swift */,
+				A43989CF1B9FE89500D84E79 /* NotificationTabViewController.swift */,
+				A43989D61B9FE98500D84E79 /* NotificationTableViewCell.xib */,
+				A43989D51B9FE98500D84E79 /* NotificationTableViewCell.swift */,
+			);
+			name = NotificationTab;
+			sourceTree = "<group>";
+		};
+		A43989DB1B9FEA7400D84E79 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				A43989D91B9FEA5E00D84E79 /* LoginViewController.swift */,
+			);
+			name = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +257,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43989D81B9FE98500D84E79 /* NotificationTableViewCell.xib in Resources */,
 				A43989AF1B9FC31000D84E79 /* Main.storyboard in Resources */,
 				A43989B41B9FC31000D84E79 /* LaunchScreen.xib in Resources */,
 				A43989B11B9FC31000D84E79 /* Images.xcassets in Resources */,
+				A42587F91BA148A500D10AA7 /* MealCardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +279,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A43989AC1B9FC31000D84E79 /* SecondViewController.swift in Sources */,
+				A43989D01B9FE89500D84E79 /* NotificationTabViewController.swift in Sources */,
+				A43989D71B9FE98500D84E79 /* NotificationTableViewCell.swift in Sources */,
+				A43989D41B9FE8E900D84E79 /* MealCardView.swift in Sources */,
+				A43989DA1B9FEA5E00D84E79 /* LoginViewController.swift in Sources */,
+				A42587EF1B9FF3C600D10AA7 /* MealNavigationController.swift in Sources */,
+				A42587F51BA0059700D10AA7 /* Utils.swift in Sources */,
+				A42587EA1B9FF19400D10AA7 /* AppConstants.swift in Sources */,
 				A43989A81B9FC31000D84E79 /* AppDelegate.swift in Sources */,
-				A43989AA1B9FC31000D84E79 /* FirstViewController.swift in Sources */,
+				A42587F11B9FF5CB00D10AA7 /* NotificationNavigationController.swift in Sources */,
+				A43989CE1B9FE88B00D84E79 /* MealTabViewController.swift in Sources */,
+				A42587F71BA009E700D10AA7 /* AppExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +487,7 @@
 				A43989C51B9FC31000D84E79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A43989C61B9FC31000D84E79 /* Build configuration list for PBXNativeTarget "Eat_TimeTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +496,7 @@
 				A43989C81B9FC31000D84E79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
