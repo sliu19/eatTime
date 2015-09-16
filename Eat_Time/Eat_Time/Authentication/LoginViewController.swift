@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var fakeLogin: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Facebook Prep
+        var loginButton:FBSDKLoginButton = FBSDKLoginButton()
+        loginButton.frame = self.fakeLogin.frame
+        self.view.addSubview(loginButton)
+        self.backEndTest()
+        loginButton.readPermissions = ["public_profile","email","user_friends"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +37,25 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // Talk to backgound test
+    func backEndTest() {
+        PFCloud.callFunctionInBackground("hello", withParameters: ["movie":"The Matrix"]) {
+            response, error in {
+                println(response)
+            }
+        }
+    }
+    
+    /**
+      * Send data to backend when user successfully logged into Facebook
+      */
+    func loggedIn(userData:NSDictionary) {
+        PFCloud.callFunctionInBackground("logged_in", withParameters: userData as [NSObject : AnyObject]) {
+            response, error in {
+                println(response)
+            }
+        }
+    }
 
 }

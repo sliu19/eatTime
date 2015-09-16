@@ -18,4 +18,5 @@ class Utils {
     }
     
     private init() {}
+    
 }

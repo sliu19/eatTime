@@ -32,7 +32,7 @@
 	</array>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
-		<key>UINavigationBar</key>
+        <key>UINavigationBar</key>
 		<dict>
 			<key>Style</key>
 			<string>UIBarStyleDefault</string>
@@ -53,5 +53,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb1522514074675993</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>1522514074675993</string>
+    <key>FacebookDisplayName</key>
+    <string>EatTime</string>
 </dict>
 </plist>

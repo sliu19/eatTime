@@ -22,6 +22,29 @@ class MealTabViewController: UIViewController {
         super.viewDidLoad()
         // Appearance setup
         println("Welcome to EatTime")
+        // temp test fbsdk
+        let params = ["fields":"email,friends,timezone"]
+        var request:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "/me", parameters: params, HTTPMethod: "GET")
+        request.startWithCompletionHandler({
+            (connetion,result,error) -> Void in
+            print("Facebook result")
+            if error == nil {
+                println(result)
+            } else {
+                println(error)
+            }
+        })
+        var friendlistRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "/me/friends", parameters:nil, HTTPMethod: "GET")
+        friendlistRequest.startWithCompletionHandler({
+            (connetion,result,error) -> Void in
+            print("Facebook friends result")
+            if error == nil {
+                println(result)
+            } else {
+                println(error)
+            }
+
+        })
         self.backgroundView.backgroundColor = _backgroundColorLight
         var logoImageView:UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         logoImageView.contentMode = .ScaleAspectFit
@@ -29,9 +52,16 @@ class MealTabViewController: UIViewController {
         mealNavigationItem.titleView = logoImageView
         
         self.setUp()
+        self.refreshData()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        println("Home Page")
+        self.refreshData()
+    }
+ 
     func setUp() {
         // Set up swipable cardView
         self.mainContentView.layoutIfNeeded()
@@ -40,6 +70,7 @@ class MealTabViewController: UIViewController {
         cardFrame.size.height = 400
         self.mealCardView.frame = cardFrame
         self.backgroundView.addSubview(self.mealCardView)
+        println(backgroundView.frame.size.height)
         
         // Set up UIGuesture
         var swipeRightGuesture:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "swipeRight:")
@@ -61,3 +92,9 @@ class MealTabViewController: UIViewController {
     }
 }
 
+// MARK : Data Refresh
+extension MealTabViewController {
+    func refreshData() {
+        
+    }
+}
