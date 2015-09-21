@@ -4,3 +4,7 @@
 Parse.Cloud.define("hello", function(request, response) {
   response.success("Hello world");
 });
+
+Parse.Cloud.define("logged_in", function(request, response) {
+  response.success("Logged in");
+});

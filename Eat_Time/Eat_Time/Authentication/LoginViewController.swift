@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
         self.view.addSubview(loginButton)
         self.backEndTest()
         loginButton.readPermissions = ["public_profile","email","user_friends"]
+        self.loggedIn(["i":"i"])
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +43,7 @@ class LoginViewController: UIViewController {
     func backEndTest() {
         PFCloud.callFunctionInBackground("hello", withParameters: ["movie":"The Matrix"]) {
             response, error in {
-                println(response)
+                println(error)
             }
         }
     }
@@ -51,11 +52,13 @@ class LoginViewController: UIViewController {
       * Send data to backend when user successfully logged into Facebook
       */
     func loggedIn(userData:NSDictionary) {
-        PFCloud.callFunctionInBackground("logged_in", withParameters: userData as [NSObject : AnyObject]) {
+        println("Login function")
+        PFCloud.callFunctionInBackground("logged_in", withParameters: userData as [NSObject : AnyObject], block: {
             response, error in {
                 println(response)
             }
-        }
+        })
     }
+    
 
 }
