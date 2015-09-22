@@ -42,8 +42,9 @@ class LoginViewController: UIViewController {
     // Talk to backgound test
     func backEndTest() {
         PFCloud.callFunctionInBackground("hello", withParameters: ["movie":"The Matrix"]) {
-            response, error in {
-                println(error)
+            (result: AnyObject?, error: NSError?) in
+            if let data : NSString = result as? NSString {
+                println(data)
             }
         }
     }
@@ -53,11 +54,15 @@ class LoginViewController: UIViewController {
       */
     func loggedIn(userData:NSDictionary) {
         println("Login function")
-        PFCloud.callFunctionInBackground("logged_in", withParameters: userData as [NSObject : AnyObject], block: {
-            response, error in {
-                println(response)
+        PFCloud.callFunctionInBackground("logged_in", withParameters:userData as! [NSString: NSString]) {
+            (result: AnyObject?, error: NSError?) in
+            if let data : NSString = result as? NSString {
+                NSLog("Return Value \(result) ")
             }
-        })
+            else if (error != nil) {
+                NSLog("error in logged in: \(error)")
+            }
+        }
     }
     
 

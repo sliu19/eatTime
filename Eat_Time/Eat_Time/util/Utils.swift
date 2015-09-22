@@ -19,4 +19,13 @@ class Utils {
     
     private init() {}
     
+    func parseJSON(inputData: NSData) -> NSDictionary{
+        var error: NSError?
+        var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
+        return boardsDictionary
+    }
+    
+    func getJSON(urlToRequest: String) -> NSData{
+        return NSData(contentsOfURL: NSURL(string: urlToRequest)!)!
+    }
 }
