@@ -10,8 +10,12 @@ import UIKit
 
 class NotificationTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var profileImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
+        self.profileImageView.clipsToBounds = true
         // Initialization code
     }
 
@@ -20,5 +24,6 @@ class NotificationTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     
 }

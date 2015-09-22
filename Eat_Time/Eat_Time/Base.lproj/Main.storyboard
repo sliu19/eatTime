@@ -22,10 +22,10 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hao-Qa-FNH">
                                         <rect key="frame" x="30" y="30" width="540" height="427"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Hao-Qa-FNH" secondAttribute="bottom" constant="30" id="0Dh-ha-6uu"/>
                                     <constraint firstAttribute="trailing" secondItem="Hao-Qa-FNH" secondAttribute="trailing" constant="30" id="3YW-CN-Thl"/>
@@ -186,37 +186,28 @@
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="NotificationTabViewController" customModule="Eat_Time" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0qw-kP-oPt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kud-yg-faL" userLabel="MainTableView">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationTableCell" rowHeight="80" id="Q7s-2e-QNR" userLabel="NotificationTableCell" customClass="NotificationTableViewCell" customModule="Eat_Time" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q7s-2e-QNR" id="Mph-QS-aEh">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Kud-yg-faL" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="I2w-hp-Eu8"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Kud-yg-faL" secondAttribute="bottom" id="Oxt-bH-wnZ"/>
-                            <constraint firstAttribute="trailing" secondItem="Kud-yg-faL" secondAttribute="trailing" id="krL-pN-WfI"/>
-                            <constraint firstItem="Kud-yg-faL" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="lee-iO-GSN"/>
-                        </constraints>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="72P-nz-hx8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="72P-nz-hx8" id="o7v-Kn-5cT">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8rJ-Kc-sve" id="cll-ve-VRm"/>
+                            <outlet property="delegate" destination="8rJ-Kc-sve" id="a8G-6o-qfM"/>
+                        </connections>
+                    </tableView>
                     <navigationItem key="navigationItem" title="消息" id="M0c-SL-xih"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="0qw-kP-oPt" id="MtX-8u-Zpw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

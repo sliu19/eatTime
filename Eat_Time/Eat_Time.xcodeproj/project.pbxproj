@@ -41,7 +41,6 @@
 		A43989B41B9FC31000D84E79 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43989B21B9FC31000D84E79 /* LaunchScreen.xib */; };
 		A43989C01B9FC31000D84E79 /* Eat_TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989BF1B9FC31000D84E79 /* Eat_TimeTests.swift */; };
 		A43989CE1B9FE88B00D84E79 /* MealTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989CD1B9FE88B00D84E79 /* MealTabViewController.swift */; };
-		A43989D01B9FE89500D84E79 /* NotificationTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989CF1B9FE89500D84E79 /* NotificationTabViewController.swift */; };
 		A43989D41B9FE8E900D84E79 /* MealCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989D31B9FE8E900D84E79 /* MealCardView.swift */; };
 		A43989D71B9FE98500D84E79 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43989D51B9FE98500D84E79 /* NotificationTableViewCell.swift */; };
 		A43989D81B9FE98500D84E79 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43989D61B9FE98500D84E79 /* NotificationTableViewCell.xib */; };
@@ -50,6 +49,7 @@
 		A4467E5C1BA69810006ABEF2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4467E5B1BA69810006ABEF2 /* FBSDKLoginKit.framework */; };
 		A4467E5E1BA6981A006ABEF2 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4467E5D1BA6981A006ABEF2 /* FBSDKShareKit.framework */; };
 		A4467E601BA69836006ABEF2 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4467E5F1BA69836006ABEF2 /* FBSDKMessengerShareKit.framework */; };
+		A4D2D0E81BB13B8C00D50885 /* NotificationTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D2D0E71BB13B8C00D50885 /* NotificationTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +102,6 @@
 		A43989BE1B9FC31000D84E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A43989BF1B9FC31000D84E79 /* Eat_TimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eat_TimeTests.swift; sourceTree = "<group>"; };
 		A43989CD1B9FE88B00D84E79 /* MealTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealTabViewController.swift; path = MealTabView/MealTabViewController.swift; sourceTree = "<group>"; };
-		A43989CF1B9FE89500D84E79 /* NotificationTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationTabViewController.swift; path = NotificationTabView/NotificationTabViewController.swift; sourceTree = "<group>"; };
 		A43989D31B9FE8E900D84E79 /* MealCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealCardView.swift; path = MealTabView/MealCardView.swift; sourceTree = "<group>"; };
 		A43989D51B9FE98500D84E79 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationTableViewCell.swift; path = NotificationTabView/NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		A43989D61B9FE98500D84E79 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NotificationTableViewCell.xib; path = NotificationTabView/NotificationTableViewCell.xib; sourceTree = "<group>"; };
@@ -111,6 +110,7 @@
 		A4467E5B1BA69810006ABEF2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A4467E5D1BA6981A006ABEF2 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		A4467E5F1BA69836006ABEF2 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		A4D2D0E71BB13B8C00D50885 /* NotificationTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationTabViewController.swift; path = NotificationTabView/NotificationTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,7 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				A42587F01B9FF5CB00D10AA7 /* NotificationNavigationController.swift */,
-				A43989CF1B9FE89500D84E79 /* NotificationTabViewController.swift */,
+				A4D2D0E71BB13B8C00D50885 /* NotificationTabViewController.swift */,
 				A43989D61B9FE98500D84E79 /* NotificationTableViewCell.xib */,
 				A43989D51B9FE98500D84E79 /* NotificationTableViewCell.swift */,
 			);
@@ -399,7 +399,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A43989D01B9FE89500D84E79 /* NotificationTabViewController.swift in Sources */,
 				A43989D71B9FE98500D84E79 /* NotificationTableViewCell.swift in Sources */,
 				A43989D41B9FE8E900D84E79 /* MealCardView.swift in Sources */,
 				A43989DA1B9FEA5E00D84E79 /* LoginViewController.swift in Sources */,
@@ -412,6 +411,7 @@
 				A42587FB1BA6632E00D10AA7 /* NewEventViewController.swift in Sources */,
 				A42588411BA6953000D10AA7 /* objc-link.m in Sources */,
 				A42587F71BA009E700D10AA7 /* AppExtensions.swift in Sources */,
+				A4D2D0E81BB13B8C00D50885 /* NotificationTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

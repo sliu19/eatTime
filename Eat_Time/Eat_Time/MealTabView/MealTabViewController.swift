@@ -23,28 +23,28 @@ class MealTabViewController: UIViewController {
         // Appearance setup
         println("Welcome to EatTime")
         // temp test fbsdk
-//        let params = ["fields":"email,friends,timezone"]
-//        var request:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "/me", parameters: params, HTTPMethod: "GET")
-//        request.startWithCompletionHandler({
-//            (connetion,result,error) -> Void in
-//            print("Facebook result")
-//            if error == nil {
-//                println(result)
-//            } else {
-//                println(error)
-//            }
-//        })
-//        var friendlistRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "/me/friends", parameters:nil, HTTPMethod: "GET")
-//        friendlistRequest.startWithCompletionHandler({
-//            (connetion,result,error) -> Void in
-//            print("Facebook friends result")
-//            if error == nil {
-//                println(result)
-//            } else {
-//                println(error)
-//            }
-//
-//        })
+        let params = ["fields":"email,friends,timezone"]
+        var request:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "/me", parameters: params, HTTPMethod: "GET")
+        request.startWithCompletionHandler({
+            (connetion,result,error) -> Void in
+            print("Facebook result")
+            if error == nil {
+                println(result)
+            } else {
+                println(error)
+            }
+        })
+        var friendlistRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "/me/friends", parameters:nil, HTTPMethod: "GET")
+        friendlistRequest.startWithCompletionHandler({
+            (connetion,result,error) -> Void in
+            print("Facebook friends result")
+            if error == nil {
+                println(result)
+            } else {
+                println(error)
+            }
+
+        })
         
         
         self.backgroundView.backgroundColor = _backgroundColorLight
@@ -72,7 +72,8 @@ class MealTabViewController: UIViewController {
         cardFrame.size.height = 400
         self.mealCardView.frame = cardFrame
         self.backgroundView.addSubview(self.mealCardView)
-        println(backgroundView.frame.size.height)
+        self.mainContentView.layer.cornerRadius = 5.0
+        self.mainContentView.clipsToBounds = true
         
         // Set up UIGuesture
         var swipeRightGuesture:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "swipeRight:")
