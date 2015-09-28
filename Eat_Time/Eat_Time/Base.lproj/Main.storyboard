@@ -70,7 +70,7 @@
         <!--New Event View Controller-->
         <scene sceneID="nkp-ZZ-AcM">
             <objects>
-                <viewController id="Edv-7P-UKu" customClass="NewEventViewController" customModule="Eat_Time" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Edv-7P-UKu" customClass="NewEventViewController" customModule="Eat_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vVH-L2-zwT"/>
                         <viewControllerLayoutGuide type="bottom" id="0s3-AS-Oaf"/>
@@ -158,17 +158,31 @@
                                     <constraint firstItem="Oeg-Ol-fGx" firstAttribute="leading" secondItem="27D-4f-vIp" secondAttribute="leading" id="mvo-ae-nYp"/>
                                     <constraint firstItem="F24-6q-tXR" firstAttribute="leading" secondItem="Oeg-Ol-fGx" secondAttribute="leading" id="nWo-WZ-jgy"/>
                                     <constraint firstAttribute="centerX" secondItem="27D-4f-vIp" secondAttribute="centerX" id="qeR-pY-i3R"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="F24-6q-tXR" secondAttribute="bottom" constant="14" id="sWr-fz-hZ4"/>
                                     <constraint firstItem="Oeg-Ol-fGx" firstAttribute="leading" secondItem="Izt-g4-xig" secondAttribute="leading" id="ujZ-k2-dhh"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sWr-fz-hZ4"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="gd2-kq-eHP" secondAttribute="centerY" constant="-10" id="1mN-IN-8Bo"/>
                             <constraint firstItem="gd2-kq-eHP" firstAttribute="leading" secondItem="ceN-n4-egr" secondAttribute="leading" id="QWp-q1-bZ1"/>
                             <constraint firstItem="gd2-kq-eHP" firstAttribute="top" secondItem="vVH-L2-zwT" secondAttribute="bottom" id="Rnx-B3-BnN"/>
                             <constraint firstAttribute="trailing" secondItem="gd2-kq-eHP" secondAttribute="trailing" id="VDk-WG-tLb"/>
+                            <constraint firstAttribute="width" secondItem="gd2-kq-eHP" secondAttribute="width" id="VTq-Ih-Y79"/>
                             <constraint firstItem="0s3-AS-Oaf" firstAttribute="top" secondItem="gd2-kq-eHP" secondAttribute="bottom" id="oy5-5g-v6g"/>
+                            <constraint firstAttribute="centerX" secondItem="gd2-kq-eHP" secondAttribute="centerX" id="utw-OL-PKs"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oy5-5g-v6g"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>

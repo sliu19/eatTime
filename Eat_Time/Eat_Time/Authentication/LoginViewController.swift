@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
         self.backEndTest()
         loginButton.readPermissions = ["public_profile","email","user_friends"]
         self.loggedIn(["i":"i"])
+//        self.pushNotification()
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,6 +65,24 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    /**
+    * Send data to backend when user successfully logged into Facebook
+    */
+    func pushNotification() {
+        println("Push function")
+        var paras:NSDictionary = ["text":"Test push notification"]
+        PFCloud.callFunctionInBackground("PushNotification", withParameters:paras as! [NSString: NSString]) {
+            (result: AnyObject?, error: NSError?) in
+            if let data : NSString = result as? NSString {
+                NSLog("Return Value \(result) ")
+            }
+            else if (error != nil) {
+                NSLog("error in logged in: \(error)")
+            }
+        }
+    }
+
     
 
 }

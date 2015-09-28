@@ -17,6 +17,11 @@ class NotificationTabViewController: UITableViewController {
         super.viewDidLoad()
         self.mainTableView.registerNib(UINib(nibName: "NotificationTableViewCell", bundle: nil), forCellReuseIdentifier: "NotificationCell")
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        println("Notification Page")
+        self.refreshData()
+    }
 
 }
 
@@ -32,5 +37,12 @@ extension NotificationTabViewController :UITableViewDelegate, UITableViewDataSou
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80
+    }
+}
+
+// MARK : Data reload
+extension NotificationTabViewController {
+    func refreshData() {
+        
     }
 }

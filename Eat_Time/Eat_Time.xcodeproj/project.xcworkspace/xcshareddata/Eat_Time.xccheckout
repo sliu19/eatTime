@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>8FA8923A-3485-43CE-A083-DDC9E297A568</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Eat_Time</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>474EC6D06D42C509879D35CA87C1B9F83BEEB8CA</key>
 		<string>github.com:sliu19/eatTime.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Eat_Time/Eat_Time.xcodeproj/project.xcworkspace</string>
+	<string>Eat_Time/Eat_Time.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>474EC6D06D42C509879D35CA87C1B9F83BEEB8CA</key>
