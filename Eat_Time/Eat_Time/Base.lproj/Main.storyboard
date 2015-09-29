@@ -158,14 +158,8 @@
                                     <constraint firstItem="Oeg-Ol-fGx" firstAttribute="leading" secondItem="27D-4f-vIp" secondAttribute="leading" id="mvo-ae-nYp"/>
                                     <constraint firstItem="F24-6q-tXR" firstAttribute="leading" secondItem="Oeg-Ol-fGx" secondAttribute="leading" id="nWo-WZ-jgy"/>
                                     <constraint firstAttribute="centerX" secondItem="27D-4f-vIp" secondAttribute="centerX" id="qeR-pY-i3R"/>
-                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="F24-6q-tXR" secondAttribute="bottom" constant="14" id="sWr-fz-hZ4"/>
                                     <constraint firstItem="Oeg-Ol-fGx" firstAttribute="leading" secondItem="Izt-g4-xig" secondAttribute="leading" id="ujZ-k2-dhh"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="sWr-fz-hZ4"/>
-                                    </mask>
-                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -175,14 +169,8 @@
                             <constraint firstItem="gd2-kq-eHP" firstAttribute="top" secondItem="vVH-L2-zwT" secondAttribute="bottom" id="Rnx-B3-BnN"/>
                             <constraint firstAttribute="trailing" secondItem="gd2-kq-eHP" secondAttribute="trailing" id="VDk-WG-tLb"/>
                             <constraint firstAttribute="width" secondItem="gd2-kq-eHP" secondAttribute="width" id="VTq-Ih-Y79"/>
-                            <constraint firstItem="0s3-AS-Oaf" firstAttribute="top" secondItem="gd2-kq-eHP" secondAttribute="bottom" id="oy5-5g-v6g"/>
                             <constraint firstAttribute="centerX" secondItem="gd2-kq-eHP" secondAttribute="centerX" id="utw-OL-PKs"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="oy5-5g-v6g"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -266,6 +254,15 @@
                                     <segue destination="49e-Tb-3d3" kind="presentation" id="x2N-SJ-Kqi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfA-oh-WEN" userLabel="FBLogInButton" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="192" y="383" width="216" height="35"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <outlet property="delegate" destination="iaJ-cs-apB" id="yvC-yl-LQN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -278,7 +275,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="fakeLogin" destination="jRf-4V-kKE" id="RVh-NL-UMd"/>
+                        <outlet property="fakeLogin" destination="jRf-4V-kKE" id="kij-fI-v0G"/>
+                        <outlet property="loginButton" destination="QfA-oh-WEN" id="whu-jg-WdX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ILB-LD-MT2" userLabel="First Responder" sceneMemberID="firstResponder"/>

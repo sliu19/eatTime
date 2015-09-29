@@ -99,6 +99,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         currentInstallation.setDeviceTokenFromData(deviceToken)
         currentInstallation.channels = ["global"]
         currentInstallation.saveInBackground()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(deviceToken, forKey: "deviceToken")
     }
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
 //        PFPush.handlePush(userInfo)

@@ -10,17 +10,20 @@ import UIKit
 import Parse
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var loginButton: FBSDKLoginButton!
 
     @IBOutlet weak var fakeLogin: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Facebook Prep
-        var loginButton:FBSDKLoginButton = FBSDKLoginButton()
+        self.loginButton = FBSDKLoginButton()
         loginButton.frame = self.fakeLogin.frame
-        self.view.addSubview(loginButton)
         self.backEndTest()
         loginButton.readPermissions = ["public_profile","email","user_friends"]
         self.loggedIn(["i":"i"])
+        
 //        self.pushNotification()
     }
 
@@ -82,7 +85,99 @@ class LoginViewController: UIViewController {
             }
         }
     }
+}
 
+extension LoginViewController: FBSDKLoginButtonDelegate{
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        println("User Logged In")
+        if ((error) != nil)
+        {
+            // Process error
+        }
+        else if result.isCancelled {
+            // Handle cancellations
+            self.failLogIn()
+        }
+        else {
+            // If you ask for multiple permissions at once, you
+            // should check if specific permissions missing
+//            if result.grantedPermissions.contains("email")
+//            {
+//                // Do work
+//            }
+            self.successfulLogIn()
+        }
+    }
     
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        println("User Logged Out")
+    }
+}
 
+//MARK : Update user data
+extension LoginViewController {
+    /**
+    * Logged in facebook Call back
+    */
+    func successfulLogIn() {
+        println("User Logged In Success")
+        self.getUserData()
+    }
+    
+    /**
+    * Cancelled facebook login Call back
+    */
+    func failLogIn() {
+        println("User Logged In Fails")
+    }
+    
+    
+    /**
+    * Retrive data from facebook api
+    * saved in to UserDefault
+    * Update parse database
+    */
+    func getUserData() {
+        let params = ["fields":"email,friends,timezone,gender"]
+        var request:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "/me", parameters: params, HTTPMethod: "GET")
+        request.startWithCompletionHandler({
+            (connetion,result,error) -> Void in
+            print("Facebook result")
+            if error == nil {
+                println(result)
+                var err:NSErrorPointer = NSErrorPointer()
+                if let jsonresult:NSDictionary = result as? NSDictionary {
+                    println(jsonresult["email"])
+                    // TODO:
+                    // Save Parse object if any
+                    var user = PFObject(className:"_USER")
+//                    user["fbid"] = jsonresult["id"] as? String
+//                    user.setObject(object: (jsonresult["id"] as? String), forKey: "deviceToken")
+                    user.saveInBackgroundWithBlock {
+                        (success: Bool, error: NSError?) -> Void in
+                        if (success) {
+                            // The object has been saved.
+                            println("save successfully")
+                            let defaults = NSUserDefaults.standardUserDefaults()
+                            defaults.setObject(user.objectId, forKey: "pid")
+                        } else {
+                            // There was a problem, check error.description
+                        }
+                    }
+                    // Set up UserDefault
+                    let defaults = NSUserDefaults.standardUserDefaults()
+                    defaults.setObject(jsonresult["email"] as? String, forKey: "email")
+                    defaults.setObject(jsonresult["id"] as? String, forKey: "fbid")
+                    
+                    
+                    //Segua to main pages
+                }
+            }
+            else {
+                println(error)
+            }
+        })
+    }
+    
+    
 }
