@@ -23,7 +23,10 @@ class LoginViewController: UIViewController {
         self.backEndTest()
         loginButton.readPermissions = ["public_profile","email","user_friends"]
         self.loggedIn(["i":"i"])
-        
+        println(NSUserDefaults.standardUserDefaults().objectForKey("pid"))
+        println(NSUserDefaults.standardUserDefaults().objectForKey("fbid"))
+        println(NSUserDefaults.standardUserDefaults().objectForKey("email"))
+        println(NSUserDefaults.standardUserDefaults().objectForKey("deviceToken"))
 //        self.pushNotification()
     }
 
@@ -138,7 +141,7 @@ extension LoginViewController {
     * Update parse database
     */
     func getUserData() {
-        let params = ["fields":"email,friends,timezone,gender"]
+        let params = ["fields":"email,friends,gender"]
         var request:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "/me", parameters: params, HTTPMethod: "GET")
         request.startWithCompletionHandler({
             (connetion,result,error) -> Void in
@@ -147,12 +150,16 @@ extension LoginViewController {
                 println(result)
                 var err:NSErrorPointer = NSErrorPointer()
                 if let jsonresult:NSDictionary = result as? NSDictionary {
-                    println(jsonresult["email"])
+                    println(jsonresult)
                     // TODO:
+                    let defaults = NSUserDefaults.standardUserDefaults()
                     // Save Parse object if any
-                    var user = PFObject(className:"_USER")
-//                    user["fbid"] = jsonresult["id"] as? String
-//                    user.setObject(object: (jsonresult["id"] as? String), forKey: "deviceToken")
+                    // Query first
+                    var user = PFObject(className:"User")
+                    user.setObject(defaults.objectForKey("deviceToken")!, forKey: "deviceToken")
+                    user.setObject(jsonresult["id"]!, forKey: "fbid")
+                    user.setObject(jsonresult["gender"]!, forKey: "gender")
+                    user.setObject(jsonresult["email"]!, forKey: "email")
                     user.saveInBackgroundWithBlock {
                         (success: Bool, error: NSError?) -> Void in
                         if (success) {
@@ -165,11 +172,8 @@ extension LoginViewController {
                         }
                     }
                     // Set up UserDefault
-                    let defaults = NSUserDefaults.standardUserDefaults()
                     defaults.setObject(jsonresult["email"] as? String, forKey: "email")
                     defaults.setObject(jsonresult["id"] as? String, forKey: "fbid")
-                    
-                    
                     //Segua to main pages
                 }
             }
