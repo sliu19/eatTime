@@ -1,4 +1,7 @@
-
+var authentication = require('cloud/authentication.js')
+var events = require('cloud/events.js')
+var notification = require('cloud/notification.js')
+var users = require('cloud/users.js')
 // Use Parse.Cloud.define to define as many cloud functions as you want.
 // For example:
 Parse.Cloud.define("hello", function(request, response) {
